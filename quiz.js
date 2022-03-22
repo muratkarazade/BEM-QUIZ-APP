@@ -217,11 +217,30 @@ const prevQuestion = () => {
       questionIndex -= 1;
       questionRender();
    }
+   
 }
 
 // sayfa ilk açıldığında ilk soruyu getirmesi için 
 // "questionRender" metodumuzu bi kere çalıştırıyoruz
 questionRender();
+
+// ================Questions-Optic===============
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // ===========Alert&Toast============
