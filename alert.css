@@ -1,0 +1,121 @@
+:root{
+    --success: #01ad01;
+    --danger:#ee1b24;
+}
+body{
+    overflow: hidden;
+}
+
+.toast__container{
+    position: absolute;
+    right: -350px;
+    top: 200px;
+    height: 80px;
+    width: 350px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 15px #8a8989;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    border-left: 3px solid rgb(123, 123, 240);
+    transition: transform 300ms ease-in;
+
+}
+.toast__container.success{
+    border-left: 3px solid var(--success);
+
+}
+
+.toast__container.danger{
+    border-left: 3px solid var(--danger);
+
+}
+
+.toast__container.show{
+    transform: translateX(-450px);
+}
+.toast__container.hide{
+    transform: translateX(450px);
+}
+
+.toast__icon{
+    
+   
+    height: 36px;
+    width: 36px;
+    
+    background-position: center ;
+    margin-left: 5%;
+    background-repeat: no-repeat;
+    color: white ;
+    border-radius: 50%;
+}
+
+.toast__container.success .toast__icon{
+    background-image: url(./img/success.png);
+    background-color: var(--success);
+}
+
+.toast__container.danger .toast__icon{
+    background-image: url(./img/danger.png);
+    background-color: var(--danger);
+}
+
+
+
+.toast__info{
+    margin-left: 5%;
+}
+.toast__title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.desc{
+    font-size: 13px;
+    font-weight: 400;
+}
+.close__toast{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    height: 15px;
+    width: 15px;
+    background-image: url(./img/close.png);
+    background-position: center;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.close__toast:hover{
+    opacity: 1;
+}
+
+.toast__progress{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    
+    bottom: 0;
+
+}
+
+.toast__container.success .toast__progress{
+    background-color: var(--success);
+}
+.toast__container.danger .toast__progress{
+    background-color: var(--danger);
+}
+
+.toast__container.show .toast__progress{
+    animation-name: progress;
+    animation-delay: 500ms;
+    animation-duration: 5s;
+
+}
+@keyframes progress{
+    from{
+        width: 100%;
+    }
+    to{
+        width :0%;
+    }
+}
