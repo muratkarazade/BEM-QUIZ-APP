@@ -217,7 +217,7 @@ const prevQuestion = () => {
       questionIndex -= 1;
       questionRender();
    }
-   
+
 }
 
 // sayfa ilk açıldığında ilk soruyu getirmesi için 
@@ -230,7 +230,7 @@ questionRender();
 
  
 
-
+// ================Questions-Optic===============
 
 
 
